@@ -3,6 +3,4 @@ variable "aws_region" {
   type        = string
   AWS_REGION  = "us-east-1"
   AWS_PROFILE = "default"
-  
-
 }
