@@ -1,41 +1,13 @@
-provider "github" {
-  token = var.github_token
-  owner = var.github_owner
-}
-
-resource "github_repository" "example" {
-  name        = var.repo_name
-  description = "This repository contains Terraform configurations to deploy an AWS Lambda function and DynamoDB table"
-  visibility  = "public" # Use "private" for a private repository
-
-  lifecycle {
-    create_before_destroy = true
-  }
-}
-
+# Add the required providers and modules
 provider "aws" {
   region = var.aws_region
 }
-
-# resource "aws_dynamodb_table" "resume_table" {
-#   name         = "Resumes"
-#   billing_mode = "PAY_PER_REQUEST"
-#   hash_key     = "ID"
-
-#   attribute {
-#     name = "ID"
-#     type = "S"
-#   }
-
-# }
-
-# locals {
-#   resume_items = file("${path.module}/resume.json")
-# }
+# Add the required json file for the table
 locals {
   resume_items_raw = file("${path.module}/resume.json")
   resume_items     = jsondecode(local.resume_items_raw)
 }
+# Add the required DynamoDB table
 resource "aws_dynamodb_table" "resumes" {
   name         = "resumes"
   billing_mode = "PAY_PER_REQUEST"
@@ -55,6 +27,8 @@ resource "aws_dynamodb_table_item" "resume_items" {
   hash_key   = "id"
   item       = jsonencode(each.value)
 }
+
+# Add the required Lambda Execution Role
 
 resource "aws_iam_role" "lambda_exec_role" {
   name = "lambda_exec_role"
@@ -79,6 +53,8 @@ resource "aws_iam_role" "lambda_exec_role" {
   ]
 }
 
+# Add the required Lambda Function
+
 resource "aws_lambda_function" "resume_lambda" {
   filename         = "lambda.zip"
   function_name    = "ResumeFunction"
@@ -93,42 +69,15 @@ resource "aws_lambda_function" "resume_lambda" {
     }
   }
 }
+# Add the required Lambda URL
 
 resource "aws_lambda_function_url" "resume_lambda_url" {
   function_name = aws_lambda_function.resume_lambda.function_name
 
   authorization_type = "NONE"
 }
-/*
-resource "aws_apigatewayv2_api" "lambda_api" {
-  name          = "resume_api"
-  description   = "API Gateway trigger for Lambda function "
-  protocol_type = "HTTP"
-  target        = aws_lambda_function.resume_lambda.arn
 
-}
-
-resource "aws_apigatewayv2_integration" "lambda_integration" {
-  api_id           = aws_apigatewayv2_api.lambda_api.id
-  integration_type = "AWS_PROXY"
-  integration_uri  = aws_lambda_function.resume_lambda.arn
-}
-
-resource "aws_apigatewayv2_route" "lambda_route" {
-  api_id    = aws_apigatewayv2_api.lambda_api.id
-  route_key = "GET /resumes"
-  target    = "integrations/${aws_apigatewayv2_integration.lambda_integration.id}"
-}
-
-resource "aws_lambda_permission" "apigw_lambda" {
-  statement_id  = "AllowAPIGatewayInvoke"
-  action        = "lambda:InvokeFunction"
-  function_name = aws_lambda_function.resume_lambda.function_name
-  principal     = "apigateway.amazonaws.com"
-  source_arn    = "${aws_apigatewayv2_api.lambda_api.execution_arn}
-}
-*/
-# API Gateway REST API
+# Add the required API Gateway REST API
 resource "aws_api_gateway_rest_api" "example" {
   name        = "example-api"
   description = "Example API"

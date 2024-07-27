@@ -1,7 +1,3 @@
-output "github_repo" {
-  value = github_repository.example.html_url
-}
-
 output "lambda_function_url" {
   value = aws_lambda_function_url.resume_lambda_url.function_url
 }
