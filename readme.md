@@ -20,8 +20,10 @@ The task is to create a Serverless function that fetches resume data stored in a
 
 <p> Here I used terraform to  deploy the lambda function, dynamoDB table and API Gateway to trigger the lambda function.  The resume.json file was passed to the dynamoDB table.</p>
 
-File Structure ![alt text](tree1.png)
+File Structure ![alt text size="400x400"](tree1.png)
 
 Make sure AWS cloud credentials are set, the variables, resume.json file are kept ready.
-The lambda function uses python 3.9 to retrieve the data from the dynamodb table. the lambda function is compressed and sent as a zip file.
+The lambda function uses python 3.9 to retrieve the data from the DynamoDB table. The lambda function is compressed and sent as a zip file.
+
+
 
