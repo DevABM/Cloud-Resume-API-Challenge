@@ -32,7 +32,7 @@ Architecture:
 
 visit my resume at
 
-[API Gateway URL]((https://1mdkqd0zyd.execute-api.us-east-1.amazonaws.com/prod/ResumeFunction))
+[API Gateway URL](https://1mdkqd0zyd.execute-api.us-east-1.amazonaws.com/prod/ResumeFunction)
 
 [Lambda Function URL](https://cc3m62jss6dpqpblzmcueiyavm0dclmr.lambda-url.us-east-1.on.aws/)
 
