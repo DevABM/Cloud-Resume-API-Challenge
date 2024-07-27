@@ -21,6 +21,7 @@ The task is to create a Serverless function that fetches resume data stored in a
 <p> Here I used terraform to  deploy the lambda function, dynamoDB table and API Gateway to trigger the lambda function.  The resume.json file was passed to the dynamoDB table.</p>
 
 File Structure 
+
 <img src="tree1.png" alt="Description" width="300" height="200">
 
 
