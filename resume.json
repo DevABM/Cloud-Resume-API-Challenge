@@ -1,0 +1,107 @@
+[
+    {
+      "id": {
+        "S": "1"
+      },
+      "Name": {
+        "S": "Amudha Balamurugan"
+      },
+      "Phone": {
+        "S": "1234567890"
+      },
+      "email": {
+        "S": "abroadabm@gmail.com"
+      },
+      "Contact": {
+        "L": [
+          {
+            "M": {
+              "LinkedIn": {
+                "S": "https://linkedin.com/in/amudhabalamurugan"
+              },
+              "GitHub": {
+                "S": "https://github.com/DevABM"
+              },
+              "Medium": {
+                "S": "https://medium.com/@dev.am.balamurugan"
+              }
+            }
+          }
+        ]
+      },
+      "Experience": {
+        "S": "2 years in AWS Cloud DevOps "
+      },
+      "Certifications": {
+        "L": [
+          {
+            "M": {
+              "name": {
+                "S": "AWS Developer Associate"
+              },
+              "date": {
+                "S": "2024-04-09"
+              }
+            }
+          },
+          {
+            "M": {
+              "name": {
+                "S": "AWS Certified Cloud Practitioner"
+              },
+              "date": {
+                "S": "2022-05-20"
+              }
+            }
+          },
+          {
+            "M": {
+              "name": {
+                "S": "Splunk User"
+              },
+              "date": {
+                "S": "2023-07-01"
+              }
+            }
+          }
+        ]
+      },
+      "Project": {
+        "L": [
+          {
+            "S": "Optimizing Cloud Deployments with Jenkins CI/CD Integration "
+          },
+          {
+            "S": "Scalable 3-Tier Web Application Architecture on AWS"
+          },
+          {
+            "S": "Serverless EC2 Instance Management with AWS Lambda"
+          }
+        ]
+      },
+      "Education": {
+        "L": [
+          {
+            "S": "Master of Science in VLSI Systems"
+          },
+          {
+            "S": "Bachelor of Science in Electronics & Communication Engineering"
+          }
+        ]
+      },
+      "Tech Stack": {
+        "L": [
+          {
+            "SS": [
+              "AWS",
+              "Docker",
+              "Terraform",
+              "Python",
+              "Linux"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+  
