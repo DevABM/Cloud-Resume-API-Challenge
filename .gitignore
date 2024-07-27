@@ -16,5 +16,6 @@ override.tf.json
 *_override.tf.json
 
 # .terraform directory
-.terraform/*
+.terraform
 .terraform.lock.hcl
+
