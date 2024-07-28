@@ -33,10 +33,16 @@ Architecture:
 <img src="API2.png" alt="Description" width="400" height="300">
 
 </p>
-visit my resume at
+
+### visit my resume at this URL
 
 [API Gateway URL](https://1mdkqd0zyd.execute-api.us-east-1.amazonaws.com/prod/ResumeFunction)
 
 [Lambda Function URL](https://cc3m62jss6dpqpblzmcueiyavm0dclmr.lambda-url.us-east-1.on.aws/)
 
 
+### or
+
+``` curl https://1mdkqd0zyd.execute-api.us-east-1.amazonaws.com/prod/ResumeFunction ```
+
+``` curl https://cc3m62jss6dpqpblzmcueiyavm0dclmr.lambda-url.us-east-1.on.aws/  ```
