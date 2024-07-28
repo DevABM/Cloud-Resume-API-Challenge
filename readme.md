@@ -29,10 +29,10 @@ Make sure AWS cloud credentials are set, the variables, resume.json file are kep
 The lambda function uses python 3.9 to retrieve the data from the DynamoDB table. The lambda function is compressed and sent as a zip file.
 
 Architecture:
-
+<p align="center">
 <img src="API2.png" alt="Description" width="400" height="300">
 
-
+</p>
 visit my resume at
 
 [API Gateway URL](https://1mdkqd0zyd.execute-api.us-east-1.amazonaws.com/prod/ResumeFunction)
