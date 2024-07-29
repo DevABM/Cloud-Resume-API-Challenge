@@ -43,6 +43,6 @@ Architecture:
 
 ### or
 
-``` curl https://1mdkqd0zyd.execute-api.us-east-1.amazonaws.com/prod/ResumeFunction ```
+``` curl https://abtxuab67i.execute-api.us-east-1.amazonaws.com/prod/ResumeFunction ```
 
-``` curl https://cc3m62jss6dpqpblzmcueiyavm0dclmr.lambda-url.us-east-1.on.aws/  ```
+``` curl https://niualthhvoea3p4omoc2wfj27y0avliw.lambda-url.us-east-1.on.aws/ ```
