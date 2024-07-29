@@ -22,7 +22,7 @@ The task is to create a Serverless function that fetches resume data stored in a
 
 File Structure 
 
-<img src="tree1.png" alt="Description" width="300" height="200">
+<img src="pics/tree1.png" alt="Description" width="300" height="200">
 
 
 Make sure AWS cloud credentials are set, the variables, resume.json file are kept ready.
@@ -30,7 +30,7 @@ The lambda function uses python 3.9 to retrieve the data from the DynamoDB table
 
 Architecture:
 <p align="center">
-<img src="API2.png" alt="Description" width="400" height="300">
+<img src="pics/API2.png" alt="Description" width="400" height="300">
 
 </p>
 
